@@ -1,0 +1,159 @@
+#paymentouter{
+    display: flex;
+}
+
+
+#box1, #box2{
+    display: flex;
+}
+#pics
+{
+ height: 100px;
+ width: 200px;
+ margin: 5px;
+ border: 1px solid black;
+}
+
+
+#boxright, #boxmiddle, #boxleft
+{
+   background-color: black;
+   height: 300px;
+   width: 300px;
+   margin: 2px;
+   margin: auto;
+}
+h4{
+   font-family: sans-serif;
+   color: white;
+}
+h2{
+   font-family: sans-serif;
+}
+#boxright>button{
+   align-items: center;
+   text-align: center;
+}
+#boxright, #boxmiddle, #boxleft >input,h4{
+   text-align: center;
+   align-items: center;
+
+}
+#paymenttext{
+   text-align: center;
+}
+#totalamount{
+   text-align: center;
+}
+#imageposter{
+height: 200px;
+width: 400px;
+margin-left: 35%;
+}
+*{
+   font-family: "Montserrat", sans-serif;
+}
+
+
+#imageposter {
+ height: 200px;
+ width: 600px;
+ margin: auto;
+ margin-top: 20px;
+ margin-left: 450px;
+
+
+}
+#separationdiv{
+ display: flex;
+}
+
+#leftseparation{
+ border: 1px solid rgb(95, 93, 93);
+ width: 650px;
+ margin: auto;
+ height: 500px;
+}
+
+
+
+#bar1, #bar2, #bar3, #bar4 ,#bar5{
+ display: flex;
+ margin: 5px;
+ justify-content: space-between;
+}
+
+#bar1>div>input{
+ height: 10px;
+ width: 100px;
+ border: 1px solid white;
+ border-bottom: 1px solid black;
+ margin-right:10px;
+}
+#bar2>div>input{
+ height: 10px;
+ width: 100px;
+ border: 1px solid white;
+ border-bottom: 1px solid black;
+ margin-right:10px;
+}
+#bar3>div>input{
+ height: 10px;
+ width: 100px;
+ border: 1px solid white;
+ border-bottom: 1px solid black;
+ margin-left:10px;
+}
+#bar4>div>input{
+ height: 10px;
+ width: 100px;
+ border: 1px solid white;
+ border-bottom: 1px solid black;
+ margin-left:10px;
+}
+#bar4,#bar2,#bar3,#bar1 > div > p {
+color: red;
+font-family: sans-serif;
+
+}
+#bar5> p{
+ color: black;
+margin: 5px;
+
+
+}
+#totalss >div{
+ display: flex;
+}
+#continuebutton{
+ height: 25px;
+ width: 90px;
+ margin: auto;
+ color: white;
+ padding: 7px;
+ background-color: rgb(177, 66, 66);
+}
+#logindiv{
+ width: 300px;
+ height: 30px;background-color: rgb(184, 50, 50);
+ color: white;
+ margin: auto;
+ padding: 5px;
+ text-align: center;
+}
+
+
+#totalamount{
+    width: 17.8%;
+    border: 1px solid red;
+    height: 30px;
+    padding: 1%;
+    margin: 1%;
+    margin-left: 40%;
+    font-size: 130%;
+    font-weight: 700;
+    color: red;
+    background-color: rgb(241, 227, 227);
+    
+   
+}

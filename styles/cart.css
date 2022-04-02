@@ -1,0 +1,238 @@
+* {
+    font-family: sans-serif;
+  }
+  #cart_item {
+    display: flex;
+    width: 70%;
+    margin-left: 14%;
+  }
+  #item_div {
+    width: 65%;
+    margin-top: 200px;
+  }
+
+  #cartdata_div {
+    display: flex;
+
+    margin-bottom: 4%;
+
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  #img81 {
+    height: 130px;
+    width: 100%;
+  }
+  #div81 {
+    height: 140px;
+    width: 140px;
+    border: 0.5px solid rgb(174, 174, 179);
+    margin: 3%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  #div82 {
+    font-size: 90%;
+    font-weight: 700;
+    width: 80%;
+    padding: 6%;
+    color: rgb(109, 99, 99);
+  }
+  #div83 {
+    font-size: 100%;
+    font-weight: 700;
+    padding-left: 7%;
+    padding-bottom: 5%;
+    color: #b91313;
+  }
+  #span84 {
+    padding-left: 7%;
+    color: #dd2222;
+    font-size: 90%;
+    font-weight: 700;
+  }
+  /*  */
+  #order_div {
+    width: 30%;
+    border-left: 1px solid grey;
+    height: 400px;
+    margin: 2%;
+    padding-left: 2%;
+    margin-top: 200px;
+  }
+  #login_access {
+    padding: 3%;
+    text-align: center;
+    color: #b91313;
+    margin-bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  }
+  #coupan_input {
+    border: 1px dashed grey;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 98%;
+    height: 40px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+      rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  }
+  #items_number {
+    padding: 5%;
+    color: grey;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 130%;
+  }
+  #hr3 {
+    border: 0.5px solid grey;
+    background-color: #555252;
+  }
+  #subtotal {
+    margin-right: 40%;
+  }
+  #cart_total,
+  #amount {
+    margin-right: 8%;
+  }
+  #deliveryfree {
+    margin-right: 17%;
+  }
+  #delivery {
+    margin-right: 22%;
+  }
+  #youpay {
+    margin-right: 30%;
+  }
+  #youpay,
+  #amount {
+    font-size: 120%;
+    font-weight: 800;
+  }
+  #placeorder {
+    width: 94%;
+    height: 22px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-align: center;
+    padding: 3%;
+    margin-top: 8%;
+    color: white;
+    background-color: #ee1010;
+  }
+  #detail_box {
+    padding: 5%;
+    color: rgb(83, 80, 80);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+      rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+  #detail_box > div {
+    margin-bottom: 10%;
+  }
+/* recommeneded data css */
+  #Recommendedpro{
+    grid-gap: 2%;
+    row-gap: 3%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    }
+    #Recommendedpro >div>img{
+      height: 200px;
+        width: 96%;
+        padding: 2%;
+        background-color: white;
+    }
+
+    #Recommendedpro >div {
+      border: 0.5px solid rgb(240, 230, 230);
+      background-color: rgb(233, 233, 233);
+      color: black;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    }
+    #product_name{
+      font-size: 100%;
+      font-weight: 600;
+      padding-top: 2%;
+      padding-bottom: 4%;
+      height: 70px;
+    }
+    #productprice{
+      padding-top: 1%;
+        padding-bottom: 3%;
+        font-size: 100%;
+        font-weight: 700;
+    }
+    #divaddtocart{
+      font-size: 100%;
+        font-weight: 800;
+        width: 100%;
+        height: 30px;
+        background-color: rgb(49, 49, 49);
+        color: white;
+        padding-top: 3%;
+    }
+
+    /*  */
+    #h3{
+      text-align: center;
+      font-size: 140%;
+      font-weight: 600;
+      padding-top: 5%;
+    }
+    #div_shopnow{
+     width: 30%;
+     height: 30px; 
+     padding: 1.5%;
+     background-color: black;
+     color: white;
+     text-align: center;
+     margin-left: 34%;
+     border-radius: 5px;
+    }
+    #div_combo{
+      width: 99%;
+    height:170px;
+    margin-top: -23px;
+    background-color: rgb(182, 177, 177);
+    }
+    #vip_img{
+      width: 70%;
+      margin-left: 14%;
+      margin-top: 6%;
+      height: 200px;
+    }
+    #img_emp {
+      width: 100%;
+      margin-top: 4%;
+      height: 300px;
+    }
+
+    #recommended_div{
+      text-align: center;
+     
+      width: 70%;
+      margin-left: 14%;
+     
+    }
+    #rec_h1{
+     width: 98%;
+     height: 40px;
+     padding: 1%; 
+     background-color: rgb(216, 201, 201);
+    }
+
+
+    #img_emp_rhs{
+      height: 450px;
+      width: 340px;
+    }

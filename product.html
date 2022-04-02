@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/e3ddd9c631.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./product.css">
+  </head>
+  <body class="footer_body">
+    <!-- header -->
+    <div id="header1"></div>
+
+      <div id="header_two">
+        <div class="hover_top" id="combos_in">Combos</div>
+        <div class="hover_top" id="beard_in">Beard</div>
+        <div class="hover_top" id="face_in">Face</div>
+        <div class="hover_top" id="hair_in">Hair</div>
+        <div class="hover_top" id="body_in">Body</div>
+        <div class="hover_top" id="fragrance_in">Fragrance</div>
+        <div class="hover_top" id="fashion_in">Beardo Fashion</div>
+        <div class="hover_top" id="trimmers_in">Trimmers</div>
+      </div>
+      <!-- top div data -->
+      <div id="header_data"></div>
+      <!-- recommended -->
+
+      <select id="select_sorting">
+        <option value="">RECOMMENDED</option>
+        <option value="high_to_low">PRICE HIGH TO LOW</option>
+        <option value="low_to_high">PRICE LOW TO HIGH</option>
+      </select>
+
+      <!-- main body data -->
+      <div id="all_product"></div>
+    
+
+    <!-- footer -->
+    <div id="footer_main"></div>
+  </body>
+</html>
+<script src="./data.js"></script>
+<script type="module" src="./product.js" >
+
+let logged=JSON.parse(localStorage.getItem(emailID));
+
+if (logged.username != "") {
+  let q = document.getElementById("login_inner");
+  q.innerHTML = `Welcome!  ${logged.first_name}`;
+  console.log(q.innerHTML);
+}
+
+
+</script>
+

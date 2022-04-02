@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+   
+    <style>
+       
+        #Aboutus{
+          background-color: rgb(119, 116, 116);
+           display: flex;
+          
+        }
+        #h2about{
+                color: rgb(56, 13, 13);
+                margin-top: 200px;
+               text-decoration: underline;
+              
+            }
+       #about_div{
+          width:60% ;
+          margin-left: 0%;
+          margin-top: 150px;
+          padding: 4%;
+            color: rgb(24, 21, 21);
+          }
+
+        #aboutwho{
+          margin-left: 2%;
+        } 
+            
+       
+    </style>
+</head>
+<body>
+  
+ <!-- header1 -->
+ <div id="header1"></div>
+ 
+<div id="Aboutus">
+  
+    <div  id="aboutwho"><h2 id="h2about">Who we are</h2></div>
+    <div id="about_div">
+    Ever wondered why all great men sport beards? We pondered upon this thought and found that men with a greater cause and intellect accept their individuality, are rational and are always open to out-of-the-box ideas (some even come up with them). They take pride in being real and different, just what it takes to be a Beardo. Anybody can grow a beard but not everybody can be a Beardo.
+        The 21st century has given a new meaning to being a man...men may look tough by the exteriors <br>
+        but they're sensitive and empathetic towards everyone and they are not shy to show their softer side. <br>
+         While the fashion and grooming habits of men have changed over the years, a broody bearded look is a <br> 
+         classic and still loved the most. With various bearded looks back in rage, Beardo observed the lack of <br>
+          grooming products for men and therefore decided to change the grooming game for men with exclusive products <br>
+           made using choicest ingredients and a quality controlled manufacturing process. Beardo is not just a beard <br>
+            care expert that only focusses on beard grooming products, we’ve also forayed into men’s skincare range that <br>
+             includes scrub, moisturiser, masks, bodywash, serums et al and a carefully curated hair care range that focuses <br>
+              on hair types and various hair problems that men are prone to. We always come up with breakthrough products which <br>
+               are hassle-free to use and are effective on men. Our primary focus is to change mens’ grooming game and help them <br>
+                become stylish and sexier than ever. Being a true-blue Beardo at heart,<br>
+         we’ll always bring forth products that men don't merely need but truly deserve.
+</div>
+</div>
+
+</body>
+</html>
+<script type="module">
+   //import header// filename:header1.js//  function name: header()
+   import { header } from "./components/header1.js";
+  let header1 = document.getElementById("header1");
+  header1.innerHTML = header();
+</script>

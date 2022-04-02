@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To Your Account | Beardo</title>
+    <link rel="stylesheet" href= 
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="account.css"> -->
+    <script
+    src="https://kit.fontawesome.com/e3ddd9c631.js"
+    crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login.css">
+<style>
+    #a{
+        text-decoration: none;
+    }
+    .formerror {
+            color: red;
+        }
+</style>
+</head>
+<body>
+    <div id="header"></div>
+    <div style="margin-left: 6%;padding-top: 150px;" onclick="window.location.href='index.html' ">Home/<span style="color:red">Account</span></div>
+    <h2 style="margin-left: 7%; padding: 1.5%;">ACCOUNT</h2>
+    <div id="account_main_div">
+        <div id="signup_div" class="box">
+            <form action="" id="signupform" >
+            <div class="input_text"><div> <b> BECOME A MEMBER </b></div>
+            <div>Please fill below details and become a member.</div></div>
+            <div class="signup_input">
+                <span><input type="text" placeholder="First name" id="f_name"  name="fname" required></span> <span><input id="l_name" type="text" placeholder="Last name"></span>
+            </div>
+            <div class="signup_input">
+                <span><input type="text" id="email" placeholder="Email address"></span> <span><input id="mobile" type="number" placeholder="Mobile"></span>
+            </div>
+            
+            <div class="signup_input">
+                <span><input type="password" name="password" id="password" placeholder="Password"></span>
+                 <span><input type="password" name="password" id="confirm_password" placeholder="Confirm password"></span>
+            </div>
+            <div id="warning"></div>
+            <input id="signup_btn" type="submit" value="BECOME A MEMBER"></button>
+        </form>
+        </div>
+        <div id="login_div" class="box">
+            <div class="input_text">
+                <div class="bold"> <b>ALREADY A MEMBER?</b> </div>
+             <span>Please enter your email and <br> password to login</span>
+
+            </div>
+            <form action="" id="loginform">
+            <input type="text" id="login_email" placeholder="Email address">
+            <input type="password" name="login_password" id="login_password" placeholder="Password">
+            <input type="submit" id="login_btn" value="LOGIN">
+</form>
+            <a  id="a" href="https://www.beardo.in/forgot-password"><p style="color:red;">forgot password?</p></a>
+           <div class="text_center" style="color:grey">OR</div>
+
+            <div class="flex" style="margin-bottom: 5%;">
+                <div class="text_center"  style="padding:4px 2px;background-color:rgb(45,70,185);color:white">
+                    Login with Facebook
+                </div>
+                <div class="text_center" style="padding:4px 2px;background-color: beige;">Login with Google</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer_body"></div>
+    
+</body>
+</html>
+<script type="module">
+    
+var warning=document.getElementById("warning")
+import {header} from "./components/header1.js";
+document.getElementById("header").innerHTML=header();
+
+
+ var sign_up=document.getElementById("signup_btn");
+document.querySelector("#signupform").addEventListener("submit",signup);
+
+
+
+async function signup(e) {
+    
+    let register_data;
+    try {
+    
+        e.preventDefault();
+    var firstname = document.querySelector("#f_name").value;
+    if( firstname.length<2){
+        alert("Length of name is too short")
+    }
+    var email = document.querySelector("#email").value;
+    var password = document.querySelector("#password").value;
+    var confirmPassword = document.querySelector("#confirm_password").value;
+    var mobile = document.querySelector("#mobile").value;
+    var lastname = document.querySelector("#l_name").value;
+
+
+    if (firstname == "" || mobile == "" || email == "" || password == "" ||confirmPassword=="") {
+            alert("All field required")
+        }
+        else {
+            register_data = {
+                firstname,
+                lastname,
+                email,
+                password,
+                mobile,
+                confirmPassword
+            }
+
+    
+        }
+
+    
+        register_data = JSON.stringify(register_data);
+        console.log("register_data:", register_data);
+
+   
+}catch(err){
+    console.log(err);
+}
+
+//
+        let reg_api = "http://localhost:5100/register";
+        let response = await fetch(reg_api, {
+        method: "POST",
+         body: register_data,
+        headers: {
+      "Content-Type": "application/json",
+
+        },
+    })
+  
+//
+
+let data = await response.json();
+    // alert(data.error.message)
+    console.log("data:", data);
+
+    let firstname_err = document.getElementById("f_name");
+    let lastname_err = document.getElementById("l_name");
+    let email_err = document.getElementById("email");
+    let password_err = document.getElementById("password");
+    let confirmpassword_err = document.getElementById("confirm_password");
+
+            firstname_err.textContent = "";
+            lastname_err.textContent = "";
+            email_err.textContent = "";
+            password_err.textContent = "";
+            confirmpassword_err.textContent="";
+
+
+            if (data.errors != undefined) {
+
+console.log(data.message)
+
+ data.errors.forEach((el) => {
+     console.log(el.message, el.key);
+
+    
+        
+         
+     if (el.key == "firstname") {
+            
+         firstname_err.textContent = el.message
+     }
+     if (el.key == "lastname") {
+            
+         lastname_err.textContent = el.message
+     }
+     if (el.key == "email") {
+            
+         email_err.textContent = el.message
+     }
+     if (el.key == "password") {
+            
+         password_err.textContent = el.message
+     }
+     if (el.key == "confirmPassword") {
+            
+        confirmpassword_err.textContent = el.message
+        }
+ })
+ 
+}
+
+else if (data.status === "ok") {
+
+        warning.innerHTML="Login to Continue";
+        warning.style.color="red";
+        alert("Registration Successfull");
+        location.reload()
+        
+}
+ else {
+            alert("data.message",data.message);
+      }
+
+}
+
+
+
+//login form
+
+
+ document.querySelector("#loginform").addEventListener("submit",signIn);
+
+       
+
+ async function signIn(event){
+      
+   try{  
+       event.preventDefault();
+       let login_data = {  
+            email : document.querySelector("#login_email").value,
+            password : document.querySelector("#login_password").value
+ }
+ console.log(1);
+
+ login_data = JSON.stringify(login_data);
+ let login_url = `http://localhost:5100/login`;
+    let response = await fetch(login_url,{
+
+        method:"POST",
+        body:login_data,
+
+        headers: {
+            "Content-Type": "application/json",
+
+        },
+
+    })
+//
+console.log(2);
+let data = await response.json();
+   console.log("data:", data);
+    if (data.status === "ok") {
+        
+        alert("Login Successfully");
+
+        let username = document.querySelector("#login_email").value;
+
+         console.log(username);
+        console.log("tokn",data.token);
+        getUser(username, data.token);
+
+        setTimeout(function(){
+            window.location.href = "index.html";
+        },1000)
+       
+      
+    }
+
+    else {
+        console.log(data.message)
+        alert(data.message);
+    }
+}
+catch(e){
+    console.log(e)
+}
+ }
+
+
+ const getUser = async(user,token) => {
+    let url = `http://localhost:5100/users?email=${user}`;
+    try{
+        let responce = await fetch(url, {
+            headers: {
+                "Content-Type" : "application/json",
+                "Authorization" : `Bearer ${token}`
+            }
+        })
+        let data = await responce.json();
+
+        console.log("abcd se phle ",data);
+        let abcd = {
+           data: data.firstname,
+            token,
+        }
+        localStorage.setItem("loginData", JSON.stringify(abcd));
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+
+
+
+var logged = JSON.parse(localStorage.getItem("loginData"));
+ console.log(logged);
+ if(logged!=null && logged!=""){
+  console.log(logged);
+  let q = document.getElementById("login_inner");
+  q.innerHTML = `Welcome!  ${logged.data}`;
+  q.style.color="red";
+}
+else {
+ 
+}
+
+
+
+import {footer} from "./components/footer.js"
+    var foot=document.querySelector(".footer_body");
+    foot.innerHTML=footer()
+    
+                                                                                                                                                                            //jagamohan panda{fw14_011}
+    
+</script>                                                                   

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    #container{
+        width:300px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin:auto;
+        margin-top:5%;
+        background-color: #494746;
+        color: WHITE;
+    }
+    input[type="submit"]{
+        border:0px;
+        color:white;
+        border-radius:20px;
+        padding:5px;
+        margin:10px;
+        background-color:#dc2f02;
+        width:70px;
+    }
+    p{
+        font-size:14px;
+    }
+    #container>h4,h5,p,form{
+        padding:10px;
+    }
+    h4,.p-tag{
+        color:#f5f9fc;
+    }
+    </style>
+</head>
+<body>
+   
+    <div id="container">
+        <h4>Verify Account</h4>
+        <h5>Mobile verification has <br>successfully done</h5>
+        <h3 class='p-tag'>We have send the OTP on the registered mobile number</h3>
+        <form>
+            <h3>Enter OTP </h3>
+            <input id='otp' type='number' placeholder="enter OTP 1234"/>
+            <br>
+            <input type='submit' value='Verify'/>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", otpCheck);
+    var cart_data = JSON.parse(localStorage.getItem("cart_data_local")) || [];
+
+    function otpCheck(event) {
+        event.preventDefault();
+
+        var otp = document.querySelector("#otp").value;
+
+        if(otp==1234) {
+            alert("order is placed successfully");
+            cart_data=[];
+            localStorage.setItem("cart_data_local",JSON.stringify(cart_data));
+           window.location.href='index.html';
+        
+
+        }
+        else{
+            alert("Wrong OTP")  
+        }
+       
+        
+    }
+ 
+</script>

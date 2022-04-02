@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <!-- header1 -->
+    <div id="header1"></div>
+    <!-- cartdata -->
+    <div id="cart_item">
+      <div id="item_div"></div>
+      <div id="order_div">
+        <div id="login_access">Login to access wallet amount</div>
+        <input
+          id="coupan_input"
+          type="text"
+          placeholder="Apply coupon enter masai30"
+        />
+        <div id="items_number"></div>
+
+        <hr id="hr3" />
+        <div id="detail_box">
+          <div>
+            <span id="subtotal"></span>
+            <span id="cart_total"></span>
+          </div>
+          <div><span id="delivery"></span> <span id="deliveryfree"></span></div>
+          <span id="youpay"></span>
+          <span id="amount"></span>
+        </div>
+        <div id="placeorder"></div>
+      </div>
+    </div>
+    <div><img id="vip_img" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidmlwL3ZpcC1saW1pdGVkLW9mZmVyLWJhbm5lci5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0="></div>
+    <div id="recommended_div">
+      <h1 id="rec_h1">Recommended</h1>
+    <div id="Recommendedpro"></div>
+    </div>
+  </body>
+</html>
+<script type="module" src="./cart.js"></script>
+<!-- <script src="./scripts/recommenddata.js"></script> -->
+<script>
+  let url = `http://localhost:5100/homes`;
+async function FetchApi(){
+  try {
+      let res = await fetch(url);
+      let data = await res.json();
+      console.log(data.home)
+     appendData(data.home)
+  } catch (error) {
+      console.log("error",error);
+  }
+}
+FetchApi();
+
+
+//
+function appendData(data){
+data.map((elem)=>{
+    var box=document.createElement("div");
+    box.id="box"
+    var image=document.createElement("img");
+    image.src=elem.img_url;
+    var name=document.createElement("div");
+    name.textContent=elem.title;
+    name.style.color="black";
+    name.id="product_name"
+    var p=document.createElement("div");
+    p.id="productprice"
+    p.textContent=`₹  ${elem.price}`;
+    p.style.color="black";
+    var addtocart=document.createElement("div")
+    addtocart.id="cart_button"
+    addtocart.textContent="AddToCart";
+    addtocart.id="divaddtocart";
+    addtocart.addEventListener("click",function(){
+       cart_data(elem);
+  alert("Added to cart")
+      });
+    box.append(image,name,p,addtocart);
+    document.getElementById("Recommendedpro").append(box);
+    
+})
+}
+
+
+var arr=JSON.parse(localStorage.getItem("cart_data_local"))||[]
+  function  cart_data(cart_data){
+    arr.push(cart_data)
+   localStorage.setItem("cart_data_local",JSON.stringify(arr))
+   location.reload()
+   document.querySelector("#cart_count").textContent = `${arr.length}`;
+  }
+//  let ct= document.querySelector("#cart_count" );
+//  ct.textContent = `${arr.length}`;
+</script>

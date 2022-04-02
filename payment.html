@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+          <!-- header1 -->
+    <div id="header1"></div>
+        <!--  -->
+    <img id="imageposter" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoiZnJlZS1za3UtMjVtbC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" style="margin-top: 180px;" alt="">
+<h2 id="paymenttext">Payment</h2>
+
+<div id="totalamount">
+    
+</div>
+<div id="paymentouter">
+<div id="boxleft">
+    
+    <div id="box1"><img id="pics" src="https://i.pinimg.com/236x/ae/5f/e3/ae5fe3dc423e44c0ddbef5dc64fa356b.jpg" alt="">
+       
+    <img id="pics" src="https://i.pinimg.com/236x/be/bd/18/bebd18f80171e64b603fde912885c38d.jpg" alt=""></div>
+    <div id="box2"><img id="pics" src="https://i.pinimg.com/236x/c2/e7/fb/c2e7fb193ad7d8f4652d3f73a150f831.jpg" alt="">
+    <img id="pics" src="https://i.pinimg.com/236x/48/40/de/4840deeea4afad677728525d165405d0.jpg" alt=""></div>
+    
+</div>
+<div id="boxmiddle">
+   <div> <h4>Enter Name</h4><input type="text" placeholder="Enter Name"> </div>
+   <div><h4>Enter Card Number</h4> <input type="text" placeholder="Card Number"> </div>
+   <div> <h4>Enter CVV</h4> <input type="text" placeholder="CVV"> </div>
+   <br>
+   <div>  <input onclick="window.location.href='otp.html'" type="submit" value="Submit"> </div>
+</div>
+
+
+<div id="boxright">
+<div><h4>Enter UPI ID</h4>
+<div><input type="text" name="" placeholder="enter UPI" id="UPI"></div>
+<br>
+<button onclick="window.location.href='otp.html'">PAY</button>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+<script type="module">
+    //import header// filename:header1.js//  function name: header()
+import { header } from "./components/header1.js";
+let header1 = document.getElementById("header1");
+header1.innerHTML = header();
+//total show
+   var cart_data = JSON.parse(localStorage.getItem("cart_data_local")) || [];
+   var total = cart_data.reduce(function (acc, cv) {
+      return Number(acc) + Number(cv.price);
+    }, 0);
+   document.getElementById("totalamount").textContent=`Total Amount:  ₹ ${Math.round(total)}`
+</script>
