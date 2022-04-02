@@ -223,7 +223,7 @@ else if (data.status === "ok") {
             email : document.querySelector("#login_email").value,
             password : document.querySelector("#login_password").value
  }
- console.log(1);
+
 
  login_data = JSON.stringify(login_data);
  let login_url = `http://localhost:5100/login`;
@@ -239,7 +239,7 @@ else if (data.status === "ok") {
 
     })
 //
-console.log(2);
+
 let data = await response.json();
    console.log("data:", data);
     if (data.status === "ok") {
