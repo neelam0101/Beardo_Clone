@@ -12,9 +12,9 @@ _To start with the Project run the following command in terminal in "backend" fo
 
 ### Team Members
 
-- **[Vikrant Vinayak Raut](https://github.com/)**
-- **[Jagamohan Panda](https://github.com/)**
-- **[Ritu Bankey](https://github.com/)**
+- **[Vikrant Vinayak Raut](https://github.com/15VIKRANT)**
+- **[Jagamohan Panda](https://github.com/Jagamohan-81)**
+- **[Ritu Bankey](https://github.com/Ritu1011)**
 - **[Vishal Vivare](https://github.com/)**
 - **[Neelam Singh](https://github.com/Neelam2026)**
 
