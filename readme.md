@@ -6,7 +6,7 @@ _To start with the Project run the following command in terminal in "backend" fo
 
 > > ⌘ **npm start**
 
-> After the go to your browser and type `http://localhost:5100/homes` and you are ready to run and explore our project.
+> After that run index.html in live server and you are ready to run and explore our project.
 
 ---
 
