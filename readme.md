@@ -75,7 +75,7 @@ https://medium.com/p/492726ce89af/edit
 
 ### Google Drive Link
 
-https://drive.google.com/file/d/1r5aiVgO_qNeQzKGnN1UPiO0ba4bo6HPf/view?usp=sharing
+https://drive.google.com/drive/folders/1Gsq9AyyDSAn02JTst-GUjWtSsvTVMNCM?usp=sharing
 
 
 ### Netlify Link
