@@ -79,4 +79,4 @@ https://drive.google.com/drive/folders/1Gsq9AyyDSAn02JTst-GUjWtSsvTVMNCM?usp=sha
 
 
 ### Netlify Link
-https://beardobackend.netlify.app
+https://beardo-project.netlify.app
