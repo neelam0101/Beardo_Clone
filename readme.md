@@ -71,7 +71,7 @@ _To start with the Project run the following command in terminal in "backend" fo
 
 ### Medium Link
 
-https://medium.com/p/492726ce89af/edit
+https://medium.com/@neelam_fw15_449/clone-of-beardo-in-including-frontend-backend-49dd8194bb78
 
 ### Google Drive Link
 
