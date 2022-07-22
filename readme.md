@@ -16,6 +16,7 @@ _To start with the Project run the following command in terminal in "backend" fo
 - **[Jagamohan Panda](https://github.com/Jagamohan-81)**
 - **[Ritu Bankey](https://github.com/Ritu1011)**
 - **[Vishal Vivare](https://github.com/vishalvivare)**
+- **[Rasheed Ahemad](https://github.com/abdulrasheed8123)**
 - **[Neelam Singh](https://github.com/Neelam2026)**
 
 ---
